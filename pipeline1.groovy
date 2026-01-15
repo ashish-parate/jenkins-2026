@@ -1,34 +1,33 @@
 pipeline {
     agent any
+
     stages {
-        stage('pull') {
+        stage('Build') {
             steps {
-                echo 'pull succesed'
-                
+                echo 'Building successfully...'
+                // Add build steps here
             }
         }
-    
-        stage('build') {
+        stage('Test') {
             steps {
-                echo 'build is done'
-                
+                echo 'Testing successfully...'
+                // Add test steps here
             }
-            
         }
-        stage('test'){
+        stage('Deploy') {
             steps {
-                echo 'test is done'
-                
+                echo 'Deploying successfully...'
+                // Add deploy steps here
             }
-            
         }
-        stage('deploy'){
-            steps {
-                echo 'success deploy'
-                
-            }
-            
+    }
+
+    post {
+        success {
+            echo 'Pipeline completed successfully!'
         }
-        
+        failure {
+            echo 'Pipeline failed.'
+        }
     }
 }
