@@ -48,3 +48,14 @@ sudo sed -i \
 25. cd /opt/sonarqube/bin/linux-x86-64
 26.   ./sonar.sh start
 27. 
+
+
+
+
+
+
+
+
+
+tokan : 
+ sqp_badbdbc48deae5439ae3da6a6fde7e4fe7cbd86f
