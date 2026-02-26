@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                mvn clean verify sonar:sonar -Dsonar.projectKey=student-app-1 -Dsonar.host.url=http://13.201.183.192:9000 -Dsonar.login=sqp_c1511939047002dd7dfbc30ea1726e6cdc94ed01
+              sh "/opt/apache-maven/bin/mvn clean verify sonar:sonar -Dsonar.projectKey=student-app-1 -Dsonar.host.url=http://13.201.183.192:9000 -Dsonar.login=sqp_c1511939047002dd7dfbc30ea1726e6cdc94ed01"
 
                 // Add test steps here
             }
