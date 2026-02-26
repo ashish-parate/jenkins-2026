@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    tools {
+        maven 'Maven'
+    }
+
     stages {
           stage('pull') {
             steps {
@@ -10,7 +14,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh '/opt/apache-maven/bin/mvn clean package'
+                sh "mvn clean package"
                 // Add build steps here
             }
         }
